@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Box from '../components/Box';
+import { navData } from '../src/data.config';
 
 const Home: NextPage = () => (
   <div>
@@ -15,14 +16,19 @@ const Home: NextPage = () => (
       <h1>
         <Box>
           <div className='flex w-full justify-between'>
-            <div>Logo</div>
-            <div className='flex'>
-              <div>О нас</div>
-              <div>Список вузов</div>
-              <div>Контакты</div>
+            <div className='text-3xl font-bold flex'>Logo</div>
+            <nav className='flex'>
+              {navData.map(item => (
+                <div
+                  key={item.id}
+                  className='ml-3'
+                >
+                  {item.title}
+                </div>
+              ))}
               <div>Rus</div>
               <div>Личный кабинет</div>
-            </div>
+            </nav>
           </div>
         </Box>
       </h1>
@@ -31,36 +37,6 @@ const Home: NextPage = () => (
           Get started by editing{' '}
         <code className=''>pages/index.tsx</code>
       </p>
-
-      <div className=''>
-        <a href="https://nextjs.org/docs" className=''>
-          <h2>Documentation &rarr;</h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a href="https://nextjs.org/learn" className=''>
-          <h2>Learn &rarr;</h2>
-          <p>Learn about Next.js in an interactive course with quizzes!</p>
-        </a>
-
-        <a
-          href="https://github.com/vercel/next.js/tree/canary/examples"
-          className=''
-        >
-          <h2>Examples &rarr;</h2>
-          <p>Discover and deploy boilerplate example Next.js projects.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          className=''
-        >
-          <h2>Deploy &rarr;</h2>
-          <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-          </p>
-        </a>
-      </div>
     </main>
 
     <footer className=''>
