@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Box from '../components/Box';
-import { navData } from '../src/data.config';
+import Text from '../components/Text';
 
 const Home: NextPage = () => (
   <div>
@@ -18,17 +18,12 @@ const Home: NextPage = () => (
         <Box>
           <div className='flex w-full justify-between'>
             <div className='text-3xl font-bold flex'>Logo</div>
-            <nav className='flex font-base'>
-              {navData.map(item => (
-                <div
-                  key={item.id}
-                  className='ml-3'
-                >
-                  {item.title}
-                </div>
-              ))}
-              <div>Rus</div>
-              <div>Личный кабинет</div>
+            <nav className='flex font-base font-medium text-lg'>
+              <a href='/about' className='text-center font-medium px-6 py-2 hover:text-highlight'><Text tid={'about'} /></a>
+              <a href='/univers-list' className='text-center px-6 py-2 hover:text-highlight'><Text tid={'universityList'} /></a>
+              <a href='/contacts' className='text-center px-6 py-2 hover:text-highlight'><Text tid={'contacts'} /></a>
+              <div className='text-center px-6 py-2 hover:text-highlight'>Rus</div>
+              <div className='text-center px-6 py-2 hover:text-highlight'><Text tid={'profile'} /></div>
             </nav>
           </div>
         </Box>

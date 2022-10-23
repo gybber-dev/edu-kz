@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       colors: {
         base: '#262626',
+        highlight: '#5372E7',
       },
       fontFamily: {
         base: ['fira-sans', 'sans-serif'],
