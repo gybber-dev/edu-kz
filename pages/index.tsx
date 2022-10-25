@@ -5,7 +5,8 @@ import Box from '../components/Box';
 import Text from '../components/Text';
 import Button from '../components/Button';
 import { useState } from 'react';
-import { Modal } from 'antd';
+import { CustomizedModal } from '../components/CustomizedModal';
+import { RegistryModalContent } from '../components/RegistryModalContent';
 
 const Home: NextPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -29,15 +30,15 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      {isModalOpen && (<Modal
-        title="Title"
+      {isModalOpen && (<CustomizedModal
         open={isModalOpen}
         onOk={handleOk}
         confirmLoading={confirmLoading}
         onCancel={handleCancel}
+        closeIcon={null}
       >
-        <p>{modalText}</p>
-      </Modal>)}
+        <RegistryModalContent />
+      </CustomizedModal>)}
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://use.typekit.net/eao3xkl.css" />

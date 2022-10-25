@@ -9,6 +9,7 @@ module.exports = {
       colors: {
         base: '#262626',
         highlight: '#5372E7',
+        modal: '#21BDCA',
         yellow: '#F2C94C',
       },
       fontFamily: {

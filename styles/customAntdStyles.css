@@ -1,0 +1,60 @@
+.ant-modal-footer {
+    display: none;
+}
+
+
+.ant-modal-content {
+    background: theme(colors.inherit);
+}
+
+.ant-modal-body {
+    padding: 0;
+    background: theme(colors.inherit);
+}
+
+.ant-input {
+    width: 100%;
+    height: 59px;
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    color: rgba(0, 0, 0, 0.5);
+    background: #FFFFFF;
+    border-radius: 30px 0px;
+}
+
+.ant-input-affix-wrapper {
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    color: rgba(0, 0, 0, 0.5);
+    background: #FFFFFF;
+    border-radius: 30px 0px;   
+}
+
+.ant-form-item div {
+    /* width: 100%;
+    max-width: 100%; */
+}
+
+.ant-btn, 
+.ant-btn-primary,
+.ant-btn-primary:focus
+  {
+   @apply px-7 py-3.5 bg-yellow shadow-root active:shadow-none rounded-tl-4xl rounded-br-4xl border-0;
+   height: fit-content;
+   font-size: 18px;
+   color: black;
+}
+
+.ant-btn:hover {
+    @apply text-black bg-yellow;
+}
+
+.ant-btn-primary:focus {
+    
+}

@@ -1,11 +1,12 @@
 import React, { FC } from 'react';
-import { dictionaryList, ILangDict } from '../src/languages/data.config';
+import { dictionaryList, IFields, ILangDict } from '../src/languages/data.config';
+
 
 interface ITextProps {
-  tid: string
+  tid: keyof IFields
 }
 
-const lang: keyof ILangDict = 'ru';
+const lang: keyof ILangDict = 'ru'; // from localstorage
 const Text: FC<ITextProps> = ({ tid }) => (
   <>
     {dictionaryList[lang][tid]}
@@ -13,3 +14,5 @@ const Text: FC<ITextProps> = ({ tid }) => (
 );
 
 export default Text;
+
+export const getLocaleText = (tid: keyof IFields): string => dictionaryList[lang][tid];
