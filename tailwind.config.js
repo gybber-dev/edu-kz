@@ -13,7 +13,7 @@ module.exports = {
         yellow: '#F2C94C',
       },
       fontFamily: {
-        base: ['fira-sans', 'sans-serif'],
+        root: ['fira-sans', 'sans-serif'],
         title: ['cormorant-garamond', 'serif'],
       },
       borderRadius: {

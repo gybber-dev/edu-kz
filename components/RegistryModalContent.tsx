@@ -6,6 +6,7 @@ import {
 import React, { useState } from 'react';
 import Button from './Button';
 import Text, { getLocaleText } from './Text';
+import Title from './Title';
 
 export const RegistryModalContent: React.FC = () => {
   const [form] = Form.useForm();
@@ -34,9 +35,9 @@ export const RegistryModalContent: React.FC = () => {
 
   return (
     <div className='w-full p-6'>
-      <div className='w-full py-12 text-center font-bold text-4xl font-title'>
+      <Title>
         <Text tid='registryTitle' />
-      </div>
+      </Title>
       <Form
         form={form}
         name="register"
