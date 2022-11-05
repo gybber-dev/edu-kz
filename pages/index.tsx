@@ -105,10 +105,6 @@ const Home: NextPage = () => {
           </div>
         </div>
       </main>
-
-      <footer className='flex h-[500px] bg-gray-500 text-white'>
-        <div className='m-auto'>Footer</div>
-      </footer>
     </div>
   );};
 
