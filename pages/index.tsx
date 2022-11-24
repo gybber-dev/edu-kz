@@ -9,6 +9,12 @@ import { CustomizedModal } from '../components/CustomizedModal';
 import { RegistryModalContent } from '../components/RegistryModalContent';
 import Title from '../components/Title';
 import Step from '../components/Step';
+import {Carousel, Image as Img} from "antd";
+import carousel1 from "../public/carousel/carousel-1.jpg";
+import carousel2 from "../public/carousel/carousel-2.jpg";
+import carousel3 from "../public/carousel/carousel-3.jpg";
+import carousel4 from "../public/carousel/carousel-4.jpg";
+import carousel5 from "../public/carousel/carousel-5.jpg";
 
 const Home: NextPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -77,9 +83,43 @@ const Home: NextPage = () => {
               </nav>
             </div>
           </Box>
-          <div className='flex relative w-full h-[500px] top-0 bg-gray-500 text-white p-8'>
-            <div className='mt-auto mx-auto'>carousel</div>
-          </div>
+          <Carousel className='flex relative w-full h-[700px] top-0 text-white p-8' autoplay >
+            <div className='w-full'>
+              <Img src={carousel1.src} preview={false}
+                   title={"Международная стипендия"}
+                   alt={"Получить международную стипендию в Казахстане"}
+              />
+              <div className={'absolute z-10 top-[50%] left-[50%]'}>centered</div>
+            </div>
+            <div>
+              <Img className='w-full' src={carousel2.src} preview={false}
+                   title={""}
+                   alt={""}
+              />
+              <div className={'absolute z-10 top-[50%] left-[50%]'}>centered</div>
+            </div>
+            <div className='w-full'>
+              <Img src={carousel3.src} preview={false}
+                   title={""}
+                   alt={""}
+              />
+              <div className={'absolute z-20 top-[90%] left-[50%]'}>centered</div>
+            </div>
+            <div className='w-full'>
+              <Img src={carousel4.src} preview={false}
+                   title={""}
+                   alt={""}
+              />
+              <div className={'absolute z-10 top-[50%] left-[50%]'}>centered</div>
+            </div>
+            <div className='w-full'>
+              <Img src={carousel5.src} preview={false}
+                   title={""}
+                   alt={""}
+              />
+              <div className={'absolute z-10 top-[50%] left-[50%]'}>centered</div>
+            </div>
+          </Carousel>
         </h1>
       </header>
 
